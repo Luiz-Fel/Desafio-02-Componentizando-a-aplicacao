@@ -1,3 +1,20 @@
+import { useState, useEffect } from "react";
+
+
+
 export function Content() {
-  // Complete aqui
+  
+  const [contentList, setContentList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3333/movies', {
+
+    })
+    .then(response => response.json())
+    .then(data => setContentList(data))
+   });
+
+
+  return contentList;
+
 }
